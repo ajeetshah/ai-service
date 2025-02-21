@@ -1,5 +1,9 @@
 # AI Service
 
+## Which LLM model does this project use?
+
+Llama-3.2-1B-Instruct by Meta
+
 ## Do I need to download the LLM model first?
 
 Check https://www.llama.com/docs/getting-the-models/hugging-face/.
@@ -46,3 +50,8 @@ After start the rest API server application. Visit http://127.0.0.1:8000/docs or
 ## How to increase the response length?
 
 If you need larger response text and your machine can supprot it, change value of `max_new_tokens=100` in the python script. Check this - https://www.prompthub.us/models/llama-3-2-1b or other resources. Maximum possible value `2048` but keep it as low as possible.
+
+## Todo
+
+- Create a Dockerfile
+- Try to use the model by downloading directly from meta site. So that one does not need HF account.
