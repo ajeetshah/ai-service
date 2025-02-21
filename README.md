@@ -22,13 +22,13 @@ $ source ai-env/bin/activate # activate a virtual python env
 and the api call:
 
 - Enter something like this in the browser bar:
-  - `http://127.0.0.1:8000/generate?userContent=Who are you?`
-  - `http://127.0.0.1:8000/generate?userContent=Tell me a random but interesting fact`
+  - `http://127.0.0.1:8000/generate?uc=Who are you?`
+  - `http://127.0.0.1:8000/generate?uc=Tell me a random but interesting fact`
 - Or use the `curl`:
 
 ```bash
-curl http://127.0.0.1:8000/generate\?userContent\=Who%20are%20you\?
-curl http://127.0.0.1:8000/generate?userContent=Tell%20me%20a%20random%20but%20interesting%20fact
+curl http://127.0.0.1:8000/generate\?uc\=Who%20are%20you\?
+curl http://127.0.0.1:8000/generate?uc=Tell%20me%20a%20random%20but%20interesting%20fact
 ```
 
 ## How to increase the response length?
