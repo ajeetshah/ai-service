@@ -1,5 +1,13 @@
 # AI Service
 
+## Do I need to download the LLM model first?
+
+Check https://www.llama.com/docs/getting-the-models/hugging-face/.
+
+You need to obtain the model by filling the form available at https://huggingface.co/meta-llama and requesting the authors for the model (https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) used in this project.
+
+Once authors accept your request, you need to generate a HuggingFace token from your HF account and login from the terminal/CLI using command `huggingface-cli login`. This will enable download of the model automatically used in the project.
+
 ## How to use app_cli?
 
 ```bash
