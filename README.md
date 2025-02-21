@@ -31,6 +31,10 @@ curl http://127.0.0.1:8000/generate\?uc\=Who%20are%20you\?
 curl http://127.0.0.1:8000/generate?uc=Tell%20me%20a%20random%20but%20interesting%20fact
 ```
 
+## Where are rest API docs?
+
+After start the rest API server application. Visit http://127.0.0.1:8000/docs or http://127.0.0.1:8000/redoc.
+
 ## How to increase the response length?
 
 If you need larger response text and your machine can supprot it, change value of `max_new_tokens=100` in the python script. Check this - https://www.prompthub.us/models/llama-3-2-1b or other resources. Maximum possible value `2048` but keep it as low as possible.

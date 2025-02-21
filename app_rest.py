@@ -24,11 +24,11 @@ def getGenerator():
   return generator
 
 @app.get("/generate")
-async def generate(userContent: str):
-  if userContent == "" or userContent is None:
+async def generate(uc: str):
+  if uc == "" or uc is None:
     return {"response": "Please provide the prompt"}
   else:
-    prompt = formatPrompt(userContent)
+    prompt = formatPrompt(uc)
     generatedText = getGeneratedText(prompt)
     generatedContent = generatedText[1]["content"]
     return {"response": generatedContent}
