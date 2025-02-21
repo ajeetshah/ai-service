@@ -3,6 +3,7 @@
 ## How to use app_cli?
 
 ```bash
+$ python -m venv ai-env # Create a python virtual env if not done already
 $ source ai-env/bin/activate # activate a virtual python env
 (ai-env) $ pip install -r requirements.txt # install dependencies from requirements.txt
 (ai-env) $ python app_cli.py -uc "Who are you?" # feel free to change the prompt
@@ -12,6 +13,7 @@ $ source ai-env/bin/activate # activate a virtual python env
 ## How to use app_rest?
 
 ```bash
+$ python -m venv ai-env # Create a python virtual env if not done already
 $ source ai-env/bin/activate # activate a virtual python env
 (ai-env) $ pip install -r requirements.txt # install dependencies from requirements.txt
 (ai-env) $ uvicorn app_rest:app --host 127.0.0.1 --port 8000 # feel free to change the host / port
