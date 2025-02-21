@@ -24,7 +24,7 @@ def getGenerator():
   return generator
 
 @app.get("/generate")
-def generate(userContent: str):
+async def generate(userContent: str):
   if userContent == "" or userContent is None:
     return {"response": "Please provide the prompt"}
   else:

@@ -1,6 +1,6 @@
 # AI Service
 
-# How to use app_cli?
+## How to use app_cli?
 
 ```bash
 $ source ai-env/bin/activate # activate a virtual python env
@@ -9,7 +9,7 @@ $ source ai-env/bin/activate # activate a virtual python env
 (ai-env) $ python app_cli.py -uc "Tell me a random but interesting fact" # feel free to change the prompt
 ```
 
-# How to use app_rest?
+## How to use app_rest?
 
 ```bash
 $ source ai-env/bin/activate # activate a virtual python env
@@ -28,3 +28,7 @@ and the api call:
 curl http://127.0.0.1:8000/generate\?userContent\=Who%20are%20you\?
 curl http://127.0.0.1:8000/generate?userContent=Tell%20me%20a%20random%20but%20interesting%20fact
 ```
+
+## How to increase the response length?
+
+If you need larger response text and your machine can supprot it, change value of `max_new_tokens=100` in the python script. Check this - https://www.prompthub.us/models/llama-3-2-1b or other resources. Maximum possible value `2048` but keep it as low as possible.
