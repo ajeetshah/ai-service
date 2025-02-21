@@ -49,7 +49,7 @@ After start the rest API server application. Visit http://127.0.0.1:8000/docs or
 
 ## How to increase the response length?
 
-If you need larger response text and your machine can supprot it, change value of `max_new_tokens=100` in the python script. Check this - https://www.prompthub.us/models/llama-3-2-1b or other resources. Maximum possible value `2048` but keep it as low as possible.
+If you need larger response text and your machine can supprot it, change value of `max_new_tokens=XYZ` in the python script. Check this - https://www.prompthub.us/models/llama-3-2-1b or other resources. Maximum possible value `2048` but keep it as low as possible.
 
 ## Todo
 
