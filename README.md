@@ -12,7 +12,7 @@ $ source ai-env/bin/activate # activate a virtual python env
 # How to use app_rest?
 
 ```bash
-$ source my-env/bin/activate # activate a virtual python env
+$ source ai-env/bin/activate # activate a virtual python env
 (ai-env) $ pip install -r requirements.txt # install dependencies from requirements.txt
 (ai-env) $ uvicorn app_rest:app --host 127.0.0.1 --port 8000 # feel free to change the host / port
 ```
