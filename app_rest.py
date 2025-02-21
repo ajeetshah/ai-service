@@ -5,7 +5,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 model = "meta-llama/Llama-3.2-1B-Instruct"
-max_new_tokens=300
+max_new_tokens=100
 
 def formatPrompt(userContent):
   prompt = [

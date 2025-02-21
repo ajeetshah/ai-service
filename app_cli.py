@@ -3,7 +3,7 @@ import torch
 from transformers import pipeline
 
 model = "meta-llama/Llama-3.2-1B-Instruct"
-max_new_tokens=300
+max_new_tokens=100
 
 def getPromptContent():
   parser = argparse.ArgumentParser(
