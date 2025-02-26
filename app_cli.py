@@ -3,7 +3,7 @@ import torch
 from transformers import pipeline
 
 model = "meta-llama/Llama-3.2-1B-Instruct"
-max_new_tokens=100
+max_new_tokens=500
 
 def getGenerator():
   device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -34,12 +34,21 @@ def getGeneratedText(prompt):
   generation = generator(prompt, do_sample=False, temperature=1.0, top_p=1, max_new_tokens=max_new_tokens)
   return generation[0]['generated_text']
 
+def isAssistantRole(generatedTextItem):
+  if generatedTextItem["role"] == "assistant":
+    return True
+  return False
+
+def filterByAssistantRole(generatedText):
+  return list(filter(isAssistantRole, generatedText))
+
 if __name__ == "__main__":
   userContent, systemContent = getPromptContent()
   if userContent != "" and userContent is not None :
     prompt = formatPrompt(userContent, systemContent)
     generatedText = getGeneratedText(prompt)
-    generatedContent = generatedText[2]["content"]
-    print(f"generatedContent: {generatedContent}")
+    filtered = filterByAssistantRole(generatedText)
+    assistantContent = filtered[0]["content"]
+    print(f"generatedContent: {assistantContent}")
   else:
-    print("Enter the user content of prompt.")
+    print("Enter the user content of Prompt.")

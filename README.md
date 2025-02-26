@@ -16,31 +16,34 @@ Once authors accept your request, you need to generate a HuggingFace token from 
 
 ```bash
 $ python -m venv ai-env # Create a python virtual env if not done already
-$ source ai-env/bin/activate # activate a virtual python env
-(ai-env) $ pip install -r requirements.txt # install dependencies from requirements.txt
-(ai-env) $ python app_cli.py -uc "Who are you?" # feel free to change the prompt
-(ai-env) $ python app_cli.py -uc "Tell me a random but interesting fact" # feel free to change the prompt
+$ source ai-env/bin/activate
+(ai-env) $ pip install -r requirements.txt
+(ai-env) $ python app_cli.py -uc "Who are you?"
+(ai-env) $ python app_cli.py -uc "Tell me a random but interesting fact"
+(ai-env) $ python app_cli.py -uc "explain earth" -sc "you are an astronaut"
 ```
 
 ## How to use app_rest?
 
 ```bash
 $ python -m venv ai-env # Create a python virtual env if not done already
-$ source ai-env/bin/activate # activate a virtual python env
-(ai-env) $ pip install -r requirements.txt # install dependencies from requirements.txt
-(ai-env) $ uvicorn app_rest:app --host 127.0.0.1 --port 8000 # feel free to change the host / port
+$ source ai-env/bin/activate
+(ai-env) $ pip install -r requirements.txt
+(ai-env) $ uvicorn app_rest:app --host localhost --port 8000
 ```
 
 and the api call:
 
 - Enter something like this in the browser bar:
-  - `http://127.0.0.1:8000/generate?uc=Who are you?`
-  - `http://127.0.0.1:8000/generate?uc=Tell me a random but interesting fact`
+  - `http://localhost:8000/generate?uc=Who are you?`
+  - `http://localhost:8000/generate?uc=Tell me a random but interesting fact`
+  - `http://localhost:8000/generate?uc=what is guava in java&sc=you are a teacher`
 - Or use the `curl`:
 
 ```bash
-curl http://127.0.0.1:8000/generate\?uc\=Who%20are%20you\?
-curl http://127.0.0.1:8000/generate?uc=Tell%20me%20a%20random%20but%20interesting%20fact
+curl http://localhost:8000/generate\?uc\=Who%20are%20you\?
+curl http://localhost:8000/generate?uc=Tell%20me%20a%20random%20but%20interesting%20fact
+curl http://localhost:8000/generate?uc=what%20is%20guava%20in%20java&sc=you%20are%20a%20teacher
 ```
 
 ## Where are rest API docs?
