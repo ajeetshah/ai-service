@@ -3,7 +3,7 @@ from transformers import pipeline
 from fastapi import FastAPI
 
 model = "meta-llama/Llama-3.2-1B-Instruct"
-max_new_tokens=500
+max_new_tokens=100
 
 app = FastAPI()
 
@@ -43,3 +43,7 @@ async def generate(uc: str, sc: str | None = None):
     filtered = filterByAssistantRole(generatedText)
     assistantContent = filtered[0]["content"]
     return {"response": assistantContent}
+  
+@app.get("/hello")
+def hello():
+  return "Hello, World!"
